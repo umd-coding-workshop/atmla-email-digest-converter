@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import os
+import os, sys
 from pathlib import Path
 
 SEPARATOR = "=========================================================================\n"
@@ -22,8 +22,8 @@ def split_eml_file(eml_path: Path, output_dir: Path) -> None:
         out_path.write_text(part, encoding="utf-8")
 
 def main():
-    base_dir = Path(".").resolve()
-    output_dir = base_dir / "output"
+    base_dir = Path(sys.argv[1]).resolve()
+    output_dir = Path(sys.argv[2]).resolve()
     output_dir.mkdir(exist_ok=True)
 
     # Iterate over all .eml files in the directory (non-recursive)

@@ -1,4 +1,4 @@
-import email
+import email, sys
 from email.parser import Parser
 from pathlib import Path
 
@@ -62,8 +62,8 @@ def eml_to_html(eml_path, output_html_path, attachments_dir="attachments"):
         f.write(html)
 
 def main():
-    base_dir = Path(".").resolve()
-    output_dir = base_dir / "html"
+    base_dir = Path(sys.argv[1]).resolve()
+    output_dir = Path(sys.argv[2]).resolve()
     output_dir.mkdir(exist_ok=True)
 
     # Iterate over all .eml files in the directory (non-recursive)

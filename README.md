@@ -28,6 +28,10 @@ Processes each of the monthly email digest input files (assumed to have a ".eml"
 extension), splitting each email container in the file into an "outputs"
 subdirectory, with an indexed filename related to the original input filename.
 
+```bash
+$ email_splitter.py <INPUT_DIR> <OUTPUT_DIR>
+```
+
 ## email_convert.py
 
 This code was largely taken from
@@ -38,3 +42,7 @@ Processes each ".eml" file in the "outputs" subdirectory, creating an HTML
 file with the same name (with an ".html" extension) in an "html" subdirectory.
 
 Attachments are placed in an "attachments" subdirectory.
+
+```bash
+$ email_convert.py.py <INPUT_DIR> <OUTPUT_DIR>
+```
