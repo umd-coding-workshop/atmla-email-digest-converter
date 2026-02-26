@@ -29,7 +29,7 @@ extension), splitting each email container in the file into an "outputs"
 subdirectory, with an indexed filename related to the original input filename.
 
 ```bash
-$ email_splitter.py <INPUT_DIR> <OUTPUT_DIR>
+$ python email_splitter.py <INPUT_DIR> <OUTPUT_DIR>
 ```
 
 ## email_convert.py
@@ -44,5 +44,5 @@ file with the same name (with an ".html" extension) in an "html" subdirectory.
 Attachments are placed in an "attachments" subdirectory.
 
 ```bash
-$ email_convert.py <INPUT_DIR> <OUTPUT_DIR>
+$ python email_convert.py <INPUT_DIR> <OUTPUT_DIR>
 ```
