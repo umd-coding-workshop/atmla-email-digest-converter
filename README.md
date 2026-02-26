@@ -44,5 +44,5 @@ file with the same name (with an ".html" extension) in an "html" subdirectory.
 Attachments are placed in an "attachments" subdirectory.
 
 ```bash
-$ email_convert.py.py <INPUT_DIR> <OUTPUT_DIR>
+$ email_convert.py <INPUT_DIR> <OUTPUT_DIR>
 ```
