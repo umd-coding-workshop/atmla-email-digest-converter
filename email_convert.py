@@ -5,7 +5,8 @@ from pathlib import Path
 
 def eml_to_html(eml_path, output_html_path, attachments_dir="attachments"):
     # Create attachments directory if it doesn't exist
-    Path(attachments_dir).mkdir(exist_ok=True)
+    attachments_path = Path(output_html_path) / attachments_dir
+    attachments_path.mkdir(parents=True, exist_ok=True)
 
     # Parse the EML file
     with open(eml_path, "r", encoding="utf-8") as f:
@@ -33,7 +34,7 @@ def eml_to_html(eml_path, output_html_path, attachments_dir="attachments"):
         if part.get_filename():
             # Save attachment to disk
             filename = part.get_filename()
-            attachment_path = Path(attachments_dir) / filename
+            attachment_path = attachments_path / filename
             with open(attachment_path, "wb") as f:
                 f.write(part.get_payload(decode=True))
             attachments.append((filename, str(attachment_path)))
