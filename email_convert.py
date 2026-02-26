@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import email, sys
 from email.parser import Parser
 from pathlib import Path
