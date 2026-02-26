@@ -2,6 +2,10 @@
 
 Python utilities for converting ListServ email digests into HTML files.
 
+## Requirement
+
+* Python 3.12 or later
+
 ## Input File Format
 
 The input files consist of monthly email digests from the AtMLA mailing list.
@@ -46,3 +50,8 @@ Attachments are placed in an "attachments" subdirectory.
 ```bash
 $ python email_convert.py <INPUT_DIR> <OUTPUT_DIR>
 ```
+
+## License
+
+See the [LICENSE](LICENSE.md) file for license rights and limitations
+(Apache 2.0).
