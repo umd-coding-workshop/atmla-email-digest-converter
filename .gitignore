@@ -2,3 +2,4 @@ emails
 html
 output
 attachments
+__pycache__

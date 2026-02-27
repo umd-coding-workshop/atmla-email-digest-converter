@@ -51,6 +51,17 @@ Attachments are placed in an "attachments" subdirectory.
 $ python email_convert.py <INPUT_DIR> <OUTPUT_DIR>
 ```
 
+## Tests
+
+Tests are written using the "unittest" library provided by Python to keep this
+application free of external dependencies.
+
+To run the tests:
+
+```bash
+$ python -m unittest
+```
+
 ## License
 
 See the [LICENSE](LICENSE.md) file for license rights and limitations
