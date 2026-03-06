@@ -29,8 +29,9 @@ string separates each of the emails, which are then valid ".eml files.
 ## email_splitter.py
 
 Processes each of the monthly email digest input files (assumed to have a ".eml"
-extension), splitting each email container in the file into an "outputs"
-subdirectory, with an indexed filename related to the original input filename.
+extension), splitting each email container in the file into the specified
+output directory, with an indexed filename related to the original input
+filename.
 
 ```bash
 $ python email_splitter.py <INPUT_DIR> <OUTPUT_DIR>
@@ -42,10 +43,12 @@ This code was largely taken from
 <https://www.tutorialpedia.org/blog/a-tool-to-convert-email-to-html>
 with a few small tweaks.
 
-Processes each ".eml" file in the "outputs" subdirectory, creating an HTML
-file with the same name (with an ".html" extension) in an "html" subdirectory.
+Processes each ".eml" file (created by `email_splitter.py`) in the specified
+input directory, creating an HTML file with the same name (with an ".html"
+extension) in the specified output directory.
 
-Attachments are placed in an "attachments" subdirectory.
+Attachments are placed in an "attachments" subdirectory in the specified
+output directory.
 
 ```bash
 $ python email_convert.py <INPUT_DIR> <OUTPUT_DIR>
