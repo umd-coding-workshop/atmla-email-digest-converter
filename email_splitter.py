@@ -14,10 +14,10 @@ def split_eml_file(eml_path: Path, output_dir: Path) -> None:
     # Write each part to a new file with index starting at 0
     for idx, part in enumerate(parts):
         # Skip completely empty parts (optional)
-        if not part.strip():
+        if idx == 0 or not part.strip():
             continue
 
-        out_name = f"{eml_path.stem.replace("File_ _ATMLA-L ","")}_{idx}.eml"
+        out_name = f"{eml_path.stem.replace('File_ _ATMLA-L ','')}_{idx}.eml"
         out_path = output_dir / out_name
         out_path.write_text(part, encoding="utf-8")
 
