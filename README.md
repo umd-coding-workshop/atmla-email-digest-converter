@@ -4,7 +4,7 @@ Python utilities for converting ListServ email digests into HTML files.
 
 ## Requirement
 
-* Python 3.12 or later
+* Python 3.10 or later
 
 ## Input File Format
 
