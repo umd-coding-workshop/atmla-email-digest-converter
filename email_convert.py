@@ -28,6 +28,7 @@ def decode_filename(raw_name: str | None) -> str:
     # If decoding yields an empty string, fall back to a unique name
     if not decoded:
         return f"attachment-{uuid.uuid4()}"
+    decoded = decoded.replace('\n','')
 
     # Strip any directory components, keep only the final name
     return Path(decoded).name
